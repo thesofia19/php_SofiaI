@@ -7,6 +7,11 @@
 </head>
 <body>
 <h1>Exercice 1</h1>
+<p>Exercice 1 :
+
+    Dans un fichier index.php, créer une structure de base html. Faire un titre h1 puis en dessous, grâce à PHP, afficher une liste de 5 noms de fruits sous forme
+    de liste à puce ul li.
+</p>
 
 <?php
 
