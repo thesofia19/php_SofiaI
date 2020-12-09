@@ -1,5 +1,5 @@
 <?php
-    $admin = true;
+    $admin = false;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +29,9 @@
         <hr>
 
         <?php
-            if ($admin = false){
+            if($admin === true){
                 echo '<p>Bienvenue à vous cher administrateur <a href="https://www.ecosia.org/">voici le lien</a></p>';
-            } else {
+            }else{
                 echo '<p class="text">Attention, cette page est réservée uniquement aux admin</p>';
             }
         ?>
