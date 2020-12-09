@@ -1,5 +1,5 @@
 <?php
-    $admin = false;
+    $admin = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +14,10 @@
             }
         </style>
     </head>
-    
+
 
     <body>
-    
+
         <h1>Exercice 3</h1>
         <p>
             Dans un fichier index.php, créer une structure HTML de base.
@@ -29,14 +29,25 @@
         <hr>
 
         <?php
-            if($admin === true){
+        /*
+            if($admin){
                 echo '<p>Bienvenue à vous cher administrateur <a href="https://www.ecosia.org/">voici le lien</a></p>';
             }else{
                 echo '<p class="text">Attention, cette page est réservée uniquement aux admin</p>';
             }
+        */
         ?>
 
-
-
+        <?php
+            if($admin){
+        ?>
+            <p>Bienvenue à vous cher administrateur <a href="https://www.ecosia.org/">voici le lien</a></p>
+        <?php
+            }else{
+        ?>
+            <p class="text">Attention, cette page est réservée uniquement aux admin</p>
+        <?php
+            }
+        ?>
     </body>
 </html>
