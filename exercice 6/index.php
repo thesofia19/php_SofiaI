@@ -1,4 +1,7 @@
-
+<!--Possibilité d'insérer le tableau dans cette zone
+<?php
+$names = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie', 'Max'];
+?>-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,7 +25,11 @@
 
             $names = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie', 'Max'];
 
-            for($i = 0; $i < 10; $i++){
+            // On récupère la taille de l'array avec count()
+            $arrayLength = count($names);
+
+            //for($i = 0; $i < 10; $i++){
+            for($i = 0; $i < $arrayLength; $i++){
                 echo '<li>'.$names[$i].'</li>';
             }
 
