@@ -1,7 +1,3 @@
-<!--Possibilité d'insérer le tableau dans cette zone
-<?php
-$names = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie', 'Max'];
-?>-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,7 +33,7 @@ $names = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie',
             'pseudo' => 'Jstu12'
         ];
 
-        echo 'Votre nom est <span class="color">'.$userInfos['name'].'</span> et votre prénom est <span class="color">'.$userInfos['firstname'].'</span> . <br> Vous avez <span class="color">'.$userInfos['age'].'</span> ans, et habitez en <span class="color">'.$userInfos['country'].'</span> . <br> Votre pseudo sera <span class="color">'.$userInfos['pseudo'].'</span> .'
+        echo 'Votre nom est <span class="color">' . $userInfos['name'] . '</span> et votre prénom est <span class="color">' . $userInfos['firstname'] . '</span> . <br> Vous avez <span class="color">' . $userInfos['age'] . '</span> ans, et habitez en <span class="color">' . $userInfos['country'] . '</span> . <br> Votre pseudo sera <span class="color">' . $userInfos['pseudo'] . '</span> .'
 
         ?>
     </body>
