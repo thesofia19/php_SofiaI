@@ -20,10 +20,10 @@
         <ul>
             <?php
 
-            $prenoms = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie', 'Max'];
+            $names = ['Tom', 'Bob', 'Lola', 'Emma', 'Sara', 'Jon', 'Alex', 'Lidia', 'Marie', 'Max'];
 
             for($i = 0; $i < 10; $i++){
-                echo '<li>'.$prenoms[$i].'</li>';
+                echo '<li>'.$names[$i].'</li>';
             }
 
             ?>
