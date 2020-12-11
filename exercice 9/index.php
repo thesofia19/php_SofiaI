@@ -14,7 +14,7 @@
     }
 
 
-    $fruits = [pomme, banane, fraise, orange, kiwi, cerise, melon];
+    $fruits = ['pomme', 'banane', 'fraise', 'orange', 'kiwi', 'cerise', 'melon'];
 ?>
 
 <!DOCTYPE html>
