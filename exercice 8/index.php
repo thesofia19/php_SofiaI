@@ -15,6 +15,10 @@
             sur des utilisateurs (au moins 2 infos). Grâce à une boucle foreach, afficher toutes les infos des utilisateurs sous la forme suivante:<br>
                 -> h2: Nom de l'utilsateur <br>
                 -> p: Une phrase qui reprend toutes les infos
+
+            BONUS: Rajouter dans le tableau une liste de tous les pays visités par chaque utilisateur et rajouter la liste des pays visité à l'affichage pour
+            chaque utilisateur sous forme de liste à puces ul>li. (ATTENTION: si il n'y a pas de pays, au lieu d'avoir une liste vide, il doit y avoir un petit
+            message type "Cet utilisateur n'a pas encore visité de pays")
         </p>
         <hr>
 
@@ -50,7 +54,8 @@
         ];
 
         foreach($users as $user){
-            echo '<h2>'. $user['name'] .'</h2> Je me nomme '.$user['name'].' et je suis né le '. $user['birthdate'] . '. Je vis en '. $user['country'] .'.';
+            echo '<h2>'. $user['name'] .'</h2>';
+            echo '<p>Je me nomme ' . $user['name'] .' et je suis né le '. $user['birthdate'] . '. Je vis en '. $user['country'] .'.</p>';
         }
 
 
