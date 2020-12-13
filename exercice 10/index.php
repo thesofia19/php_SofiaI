@@ -21,8 +21,11 @@
     echo '<hr>';
 
     // Exercice 10-d : Créer une variable cette date précise textuelle : "2004-04-16 12:00:00". Le but est d'ajouter 435 jours à cette date puis
-    // de l'afficher psous le format suivant : "samedi 25 juin 2005, 06h 00m 00s"
+    // de l'afficher sous le format suivant : "samedi 25 juin 2005, 06h 00m 00s"
 
     $dateToTransform = '2004-04-16 12:00:00';
+
+    setlocale(LC_TIME, 'fr_FR.utf8', 'fr');
+    echo strftime(("%A %d %B %Y, %Hh %Mm %Ss"), strtotime($dateToTransform) + (435*24*3600));
 
 ?>
