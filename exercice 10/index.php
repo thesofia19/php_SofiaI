@@ -28,4 +28,20 @@
     setlocale(LC_TIME, 'fr_FR.utf8', 'fr');
     echo strftime(("%A %d %B %Y, %Hh %Mm %Ss"), strtotime($dateToTransform) + (435*24*3600));
 
+    echo '<br>';
+
+    // Correction:
+    // Date de départ sous forme textuelle
+    $dateToTransform = '2004-04-16 12:00:00';
+
+    // Convertion de la date initiale en timestamp (pour pouvoir faire des calculs dessus)
+    $dateToTransformTimeStamp = strtotime($dateToTransform);
+
+    // Création d'un nouveau timestamp qui correspond au timestamp initial + 435 jours
+    $newDateTimestamp = $dateToTransformTimeStamp + 435 * 24 *60 * 60;
+
+    // Affichage de la nouvelle date en utilisant son timestamp
+    echo strftime("%A %d %B %Y, %Hh %Mm %Ss", $newDateTimestamp);
+
+
 ?>
