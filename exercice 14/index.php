@@ -11,7 +11,7 @@ if (isset($_POST['color'])){
     if(!isset($error)){
 
         $pageColor = '<body style="background-color:' . htmlspecialchars($_POST['color']) . '"></body>';
-        setcookie('colorChoice', htmlspecialchars($_POST['color']), time() + 60, null, null, false, true);
+        setcookie('colorChoice', htmlspecialchars($_POST['color']), time() + 24*3600 , null, null, false, true);
     }
 
 }
