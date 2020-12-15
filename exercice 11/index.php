@@ -16,13 +16,13 @@
         Dans chacun des fichiers
         </p>
         <hr>
-        
+
         <h1>Accueil</h1>
-        
+
         <?php include 'menu.php'
-        
+
         ?>
-        
+
 
     </body>
 </html>
