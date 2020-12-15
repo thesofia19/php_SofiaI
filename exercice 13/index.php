@@ -17,9 +17,6 @@ if (
         $errors[] = 'Nom pas bon !';
     }
 
-    //!is_numeric($_POST['age']) || $_POST['age'] < 0 || $_POST['age'] > 150 || !ctype_digit($_POST['age'])
-    //!is_numeric($_POST['age']) || $_POST['age'] < 0 || $_POST['age'] > 150 || !ctype_digit($_POST['age'])
-
     if (!is_numeric($_POST['age']) || $_POST['age'] < 0 || $_POST['age'] > 150 || !ctype_digit($_POST['age'])){
         $errors[] = 'Age pas bon !';
     }
