@@ -1,21 +1,34 @@
 <?php
 
-// 1ère étape: Appel de la variable color (1 champ de formulaire = 1 isset) : consiste à vérifier si TOUTES les variables du formulaire existent
-if (isset($_POST['color'])){
-    // On vérifie le bon nombre de caractères dans le formulaire
-    if(mb_strlen($_POST['color']) < 2 || mb_strlen($_POST['color']) > 10){
-        $error = "La couleur choisie n'est pas valide<br>";
-    }
+// Par défaut on assigne la couleur grey à $newcolor pour éviter d'avoir une couleur vide dans le cas où il n'y a pas de formulaire ou de cookie.
+$newColor = '#BBBBBB';
 
-    // si pas d'erreurs détectées
-    if(!isset($error)){
-
-        $pageColor = '<body style="background-color:' . htmlspecialchars($_POST['color']) . '"></body>';
-        setcookie('colorChoice', htmlspecialchars($_POST['color']), time() + 24*3600 , null, null, false, true);
-    }
-
+// Si le cookie de sauvegarde de la couleur existe, $newColor prendra la couleur stockée dedans
+if(isset($_COOKIE['backgroundColor'])){
+    $newColor = $_COOKIE['backgroundColor'];
 }
 
+// Même chose que les 4 lignes du dessus avec une condition ternaire :
+// $newColor = (isset($_COOKIE['backgroundColor'])) ? $_COOKIE['backgroundColor'] : '#BBBBBB';
+
+// Appel des variables
+if(isset($_POST['color'])){
+
+    // Bloc des vérifs
+    if(mb_strlen($_POST['color']) < 2 || mb_strlen($_POST['color']) > 10){
+        $error = 'Vous devez remplir le champ de couleur';
+    }
+
+    // Si pas d'erreur
+    if(!isset($error)){
+
+        // $newColor contiendra la couleur envoyée dans le formulaire
+        $newColor = $_POST['color'];
+
+        // On crée un nouveau cookie pour la nouvelle couleur
+        setcookie('backgroundColor', $_POST['color'], time() + 24 * 3600, null, null, false, true);
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +39,7 @@ if (isset($_POST['color'])){
     </head>
 
 
-    <body>
+    <body style="background-color: <?php echo htmlspecialchars($newColor); ?>;">
 
         <h1>Exercice 14</h1>
         <p>
@@ -41,18 +54,21 @@ if (isset($_POST['color'])){
         </p>
         <hr>
 
-        <?php
-        echo $pageColor
-        ?>
-
         <form action="index.php" method="POST">
             <label for="color">Couleur
-                <input type="text" name="color">
+                <input type="color" name="color">
             </label>
                 <input type="submit">
         </form>
 
+        <?php
 
+        // Si le message d'erreur existe, on l'affiche
+        if(isset($error)){
+            echo '<p style="color:red;">' . $error . '</p>';
+        }
+
+        ?>
 
     </body>
 </html>
