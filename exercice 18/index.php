@@ -57,6 +57,10 @@
             Ex: index.php?color=red     --> Seulement les fruits rouges seront récupérer et affichés
 
         <hr>
+        <form action="index.php" method="GET">
+            <input type="text" name="color">
+            <input type="submit">
+        </form>
 
         <?php
 
