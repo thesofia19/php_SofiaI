@@ -59,7 +59,7 @@
         <hr>
         <form action="index.php" method="GET">
             <input type="text" name="color">
-            <input type="submit">
+            <input type='submit'>
         </form>
 
         <?php
