@@ -14,7 +14,7 @@
             Dans un fichier index.php (avec structure html de base), créer un tableau multidimensionnel contenant au moins 5 sous tableaux avec des infos
             sur des utilisateurs (au moins 2 infos). Grâce à une boucle foreach, afficher toutes les infos des utilisateurs sous la forme suivante:<br>
                 -> h2: Nom de l'utilsateur <br>
-                -> p: Une phrase qui reprend toutes les infos
+                -> p: Une phrase qui reprend toutes les infos <br>
 
             BONUS: Rajouter dans le tableau une liste de tous les pays visités par chaque utilisateur et rajouter la liste des pays visité à l'affichage pour
             chaque utilisateur sous forme de liste à puces ul>li. (ATTENTION: si il n'y a pas de pays, au lieu d'avoir une liste vide, il doit y avoir un petit

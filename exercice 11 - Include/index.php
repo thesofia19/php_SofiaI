@@ -13,7 +13,7 @@
         <p>
         Créer 3 fichiers : index.php, contact.php et shop.php.<br>
 
-        Dans chacun des fichiers
+        Dans chacun des fichiers faire afficher le menu sans avoir à le recopier.
         </p>
         <hr>
 

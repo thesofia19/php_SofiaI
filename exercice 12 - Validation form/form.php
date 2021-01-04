@@ -26,8 +26,8 @@
             <label for="firstname">Prénom
                 <input type="text" name="firstname">
             </label>
-            <label for="mail">Mail
-                <input type="mail" name="mail">
+            <label for="email">Mail
+                <input type="email" name="email">
             </label>
             <input type="submit">
         </form>
